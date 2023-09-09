@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
 
     <title>Batman</title>
 </head>
@@ -152,51 +153,99 @@
             </section>
             <section>
                 <h2>Multimédia</h2>
-                
+
+                <div>
+                    <img src="img/Illustrations/Bathome_ba1.png" alt="Batman Begins">
                 </div>
+                <div>
+                    <h2>ACTION, ADVENTURE</h2>
+                    <h3>Batman Begins</h3>
+                    <p>IMDB : <span>8.2</span></p>
+                    <p>
+                        Le jeune Bruce Wayne assiste impuissant au meurtre de ses parents. Profondément 
+                        traumatisé, il grandit obnubilé par un désir de vengeance. La Ligue des ombres, une secte de 
+                        guerriers ninja dirigée par Ra's al Ghul, se chargera de son entraînement. De retour chez lui à 
+                        Gotham, avec l'aide de son majordome Alfred Pennyworth, Bruce Wayne se lance alors dans 
+                        la lutte contre le crime sous le nom de Batman. 
+                    </p>
+                </div>
+                
 
                 <!-- <iframe src="https://www.youtube.com/embed/jXrFsn9pcZY?si=qJ1JbUD21C4CP-iM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen id="bande-annonce"></iframe> -->
 
-            </section>
-            <section>
+            
                 <div id="contact">
                     <h2>Prenons contact</h2>
                     <form method="POST" action="index.html">
-                        <fieldset>
-                            <legend>Adresse email</legend>
-                            <input type="email" id="mel" name="mel" maxlength="50"><hr>
-                        </fieldset>
-                        <fieldset>
-                            <legend>Newsletter</legend>
+                                                    
+                            <label for="email">Adresse email</label>
+                            <input type="email" id="email" name="email" maxlength="50" placeholder = "email"><hr>
+                            <label for="newsletter"> Newsletter
+                            
                             En cochant cette case vous acceptez de recevoir l’actualité concernant les aventures de 
-                            Batman : 
-                            <input type="checkbox" name="newslettre" id="newslettre" ><br>
-                            Choisissez la fréquence à laquelle vous souhaitez recevoir votre newsletter<hr>
-                            Souhaitez-vous recevoir des news<hr>
+                            Batman : </label>
+                            <input type="checkbox" name="newsletter" id="newsletter" ><br>
                             <div>
-                                <button>Des films</button>
-                                <button>Des comics</button>
-                                <button>De tout</button>
+                                <span>Choisissez la fréquence à laquelle vous souhaitez recevoir votre newsletter</span>
+                                <span>
+                                    <img src="img/logos/icon_flèche_2.png" alt ="Flèche bas">
+                                </span>
                             </div>
-                        </fieldset>
-                        <fieldset>
-                            <legend>Message</legend>
-                            Laissez un commentaire pour la communauté<hr>
-                        </fieldset>
-                        <button type="submit">Confirmer</button>
+                            <div>
+                                <p>Souhaitez-vous recevoir des news</p>
+
+                            </div>
+                            <a href="">Des films</a>
+                            <a href="">Des comics</a>
+                            <a href="">De tout</a>
+
+                            <p>Message</p>
+                            <textarea id="message" name="message" placeholder="Laissez un commentaire pour la communauté"></textarea>
+                            <hr>
                         
-
-
+                        <button type="submit">Confirmer</button>
                     </form>
-                    
-
                 </div>
-            </section>
-        </section>
+                <section>
+                    <div>
+                        <div>
+                            <img src="img/Logos/icon_guillemets_1.png" alt="Guillemets">
+                        </div>
+                        <div>
+                            <div>
+                                <p> La seule façon raisonnable de vivre en ce bas monde, c'est en dehors des règles. » 
+                                    </p>
+                            </div>
+                            <div>
+                                The Dark Knight : Le Chevalier Noir - Le Joker à Batman (2008)
+
+                            </div>
+                        </div>
+                        <div>
+                            <img src="img/Logos/icon_guillemets_2.png" alt="Guillemets">
+                        </div>
+                    </div>
+                </section>
+        
 
     </main>
-        <footer>
+    <footer>
+        <div>
+            <div>
+                <img src="img/logos/icon_WB.png" alt="Warner Bros" style="background-color:black">
+                <p>Ce projet respecte l’univers cinématographique des films Batman récents. Version Nolan & 
+                    Snyder & Reeves </p>
+            </div>
+            <div>
+                <a href="#"><img src="img/logos/logo_sayna_white.png" alt="Sayna" style="background-color : black"></a>
+                <a href=""><img src="img/logos/icon_x.png" alt="X" style="background-color : black"></a>
+                <a href=""><img src="img/logos/icon_DC.png" alt="DC" style="background-color : black"></a>
+                <a href=""><img src="img/logos/icon_facebook.png" alt="FB" style="background-color : black"></a>
+                <a href=""><img src="img/Logos/icon_ig.png" alt="IG" style="background-color : black"></a>
+                <a href=""><img src="img/Logos/icon_tw.png" alt="Twitter" style="background-color : black"></a>
+            </div>
+        </div>
 
-        </footer>
+    </footer>
 </body>
 </html>
