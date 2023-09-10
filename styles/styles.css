@@ -1,3 +1,80 @@
+/*Importation des polices de caractères*/
+
+@font-face{
+    font-family : "rajdhani";
+    src:url("fonts/rajdhani/Rajdhani-Medium.ttf");
+}
+
+@font-face{
+    font-family : "space_grotesk";
+    src:url("fonts/Space_Grotesk/SpaceGrotesk-Regular.ttf");
+}
+:root{
+    --yellow : #FFFF00;
+    --yellow2 : #f8f184;
+    --blue : #19587D;
+    --red : #B11313;
+    --black1 : #0D0E09;
+    --black2 : #000000;
+    --white : #FFFFFF;
+    --grey : #C4C4C4;
+    --blue2 : #EDDEBF;
+    --marron : #EDDEBF;
+    --marron2 : #890008;
+}
+
+*{
+    margin : 0;
+    padding : 0;
+    box-sizing : border-box;
+}
+h1{
+    font-family : 'rajdhani';
+    font-size : 36px;
+    font-weight : 400;
+}
+button{
+    font-family : 'rajdhani';
+    font-size : 20px;
+    font-weight :400;
+}
+.container{
+    width : 80%;
+    margin : 0 auto;
+}
 body{
-    
+    background-color : black;
+    color : white;
+    font-family : 'space_grotesk';
+    font-weight : 300;
+
+}
+nav{
+    display : flex;
+    align-items : center;
+    justify-content : space-between;
+    padding-top : 20px;
+}
+ul{
+    list-style : none;
+}
+a{
+    color : var(--white);
+    font-size : 20px;
+    font-weight : 500;
+}
+ul a:hover{
+   color : var(--yellow);
+}
+#hero{
+    border : 1px solid white;
+    background-image : url('../img/Illustrations/Bathome1.png');
+    height: 800px;
+    background-position : top center;
+    background-repeat : no-repeat;
+    background-color : #19587d;
+}
+.batman-personnages{
+    display : flex;
+    justify-content : space-between;
 }
