@@ -19,8 +19,8 @@
     --white : #FFFFFF;
     --grey : #C4C4C4;
     --blue2 : #EDDEBF;
-    --marron : #EDDEBF;
-    --marron2 : #890008;
+    --gradient-white : #eddebf65;
+    --gradient-red : #890009a5;
 }
 
 *{
@@ -67,14 +67,87 @@ ul a:hover{
    color : var(--yellow);
 }
 #hero{
-    border : 1px solid white;
+    /* border : 1px solid white; */
     background-image : url('../img/Illustrations/Bathome1.png');
     height: 800px;
     background-position : top center;
     background-repeat : no-repeat;
     background-color : #19587d;
+    background-size : cover;
 }
-.batman-personnages{
+
+.content{
+    display : flex;
+    flex-direction : column;
+    justify-content : center;
+    text-align : center;
+    width : 60%;
+    margin : 0 auto;
+    padding-top : 150px;
+}
+#hero .titre{
+    margin : 20px 0;
+}
+.btn{
+    text-decoration : none;
+    color : var(--white);
+    font-size : 22px;
+    padding : 10px 40px;
+    /* border : 1px solid white; */
+    background : linear-gradient(80deg, var(--gradient-white),var(--gradient-red));
+    box-shadow : var(--black1) 5px 5px 60px;
+    margin-top : 10px;
+}
+
+#hero .fleche{
+    display : block;
+    margin : 0 auto;
+    margin-top: 285px;
+
+}
+.scroll{
+    display: flex;
+    flex-direction : column;
+    align-items : center;
+    position : fixed;
+    right : 80px;
+    top : 200px;
+
+}
+.scroll .social{
+    margin : 15px;
+}
+#batman-cinema, #nemesis, #allies, #batman-justice-league{
+    margin-top : 40px;
+}
+.batman-personnage{
     display : flex;
     justify-content : space-between;
+}
+#batman-cinema .titre, #nemesis .titre, #allies .titre, #batman-justice-league .titre{
+    text-transform : uppercase;
+    font-weight : bold;
+    margin : 30px 0;
+}
+#batman-cinema .description, #nemesis .description, #allies .description, #batman-justice-league .description{
+    margin-bottom : 40px;
+    text-align : justify;
+    width : 80%;
+    font-size : 21px;
+}
+#batman-cinema .personnage-info, #nemesis .personnage-info, #allies .personnage-info{
+    text-align : center;
+}
+
+#multimedia .slider-multimedia{
+    display : flex;
+    width : 60%;
+    margin : 40px auto;
+}
+#multimedia .slider-image{
+    width : 100%;
+}
+#multimedia .slider-content{
+    padding : 15px;
+    background-color :#727272; 
 }
