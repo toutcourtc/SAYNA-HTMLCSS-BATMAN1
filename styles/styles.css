@@ -9,6 +9,7 @@
     font-family : "space_grotesk";
     src:url("fonts/Space_Grotesk/SpaceGrotesk-Regular.ttf");
 }
+/************ Défintiion des variables couleurs ***********/
 :root{
     --yellow : #FFFF00;
     --yellow2 : #f8f184;
@@ -23,87 +24,73 @@
     --gradient-red : #890009a5;
 }
 
+/****************Règles générales appliquées sur toute la page**************/
+
 *{
     margin : 0;
     padding : 0;
     box-sizing : border-box;
 }
-h1{
-    font-family : 'rajdhani';
-    font-size : 36px;
-    font-weight : 400;
-}
-button{
-    font-family : 'rajdhani';
-    font-size : 20px;
-    font-weight :400;
-}
+
 .container{
     width : 80%;
     margin : 0 auto;
+    position : relative;
+}
+html{
+    height : 100%;
 }
 body{
     background-color : black;
     color : white;
     font-family : 'space_grotesk';
     font-weight : 300;
+    height : 100%;
 
 }
-nav{
-    display : flex;
-    align-items : center;
-    justify-content : space-between;
-    padding-top : 20px;
+main{
+    width : 100%;
 }
-ul{
-    list-style : none;
+.cadre{
+    border: #727272 2px solid;
+    height : 1020vh;
+    position : absolute;
+    top : 132px;
+    left : 80px;
+    width : 85%;
+    /* left : 102px; */
+    opacity : 0.5;
+    z-index : -1;
+}
+/* .cadre2{
+    border: red 2px solid;
+    height : 100vh;
+    position : absolute;
+    top : 132px;
+    left : 80px;
+    width : 85%;
+    /* left : 102px; */
+    /*opacity : 0.5;
+    z-index : 999;
+} */
+
+button{
+    font-family : 'rajdhani';
+    font-size : 20px;
+    font-weight :400;
 }
 a{
     color : var(--white);
     font-size : 20px;
     font-weight : 500;
 }
-ul a:hover{
-   color : var(--yellow);
-}
-#hero{
-    /* border : 1px solid white; */
-    background-image : url('../img/Illustrations/Bathome1.png');
-    height: 800px;
-    background-position : top center;
-    background-repeat : no-repeat;
-    background-color : #19587d;
-    background-size : cover;
-}
-
-.content{
-    display : flex;
-    flex-direction : column;
-    justify-content : center;
-    text-align : center;
-    width : 60%;
-    margin : 0 auto;
-    padding-top : 150px;
-}
-#hero .titre{
+h2.titre{
     margin : 20px 0;
+    text-transform : uppercase;
+    font-weight : bold;
 }
-.btn{
-    text-decoration : none;
-    color : var(--white);
-    font-size : 22px;
-    padding : 10px 40px;
-    /* border : 1px solid white; */
-    background : linear-gradient(80deg, var(--gradient-white),var(--gradient-red));
-    box-shadow : var(--black1) 5px 5px 60px;
-    margin-top : 10px;
-}
-
-#hero .fleche{
-    display : block;
-    margin : 0 auto;
-    margin-top: 285px;
-
+h3{
+    margin : 10px;
 }
 .scroll{
     display: flex;
@@ -117,27 +104,115 @@ ul a:hover{
 .scroll .social{
     margin : 15px;
 }
-#batman-cinema, #nemesis, #allies, #batman-justice-league{
-    margin-top : 40px;
+
+/****La barre de navigation***/
+
+nav{
+    display : flex;
+    align-items : center;
+    justify-content : space-between;
+    padding-top : 20px;
 }
+ul{
+    list-style : none;
+}
+
+ul a:hover{
+   color : var(--yellow);
+}
+
+
+/***********La section #hero **********/
+#hero{
+    background-image : url('../img/Illustrations/Bathome1.png');
+    height: 850px;
+    background-position : top center;
+    background-repeat : no-repeat;
+    background-color : #19587d;
+    background-size : cover;
+    /* z-index : -9; */
+}
+
+.content{
+    display : flex;
+    flex-direction : column;
+    justify-content : center;
+    text-align : center;
+    width : 60%;
+    margin : 0 auto;
+    padding-top : 150px;
+}
+#boutons{
+    margin : 40px 0;
+}
+#boutons .btn{
+    text-decoration : none;
+    color : var(--white);
+    font-size : 22px;
+    padding : 10px 40px;
+    
+    background : linear-gradient(80deg, var(--gradient-white),var(--gradient-red));
+    box-shadow : var(--black1) 5px 5px 60px;
+    margin : 15px;
+    cursor : pointer !important;
+}
+#hero .texte{
+    max-width : 400px;
+    margin : 0 auto 40px auto;
+    font-size : 18px;
+}
+
+#hero .fleche{
+    display : block;
+    margin : 0 auto;
+    margin-top: 500px;
+
+}
+
+
+
+
+/************Section #batman-cinema, #nemesis, #allies, #justice-league******/
+#batman-cinema, #nemesis, #allies, #justice-league{
+    padding-top : 150px;
+}
+
+.description{
+    max-width : 800px;
+    text-align : justify;
+    font-size : 21px;
+    margin-bottom : 40px;
+}
+#chauve-souris{
+    width : 150px;
+    height : 130px;
+    position : absolute;
+    top : -80px;
+    left : 60px;
+}
+/*Les cards*/
 .batman-personnage{
     display : flex;
     justify-content : space-between;
+    max-width : 85%;
 }
-#batman-cinema .titre, #nemesis .titre, #allies .titre, #batman-justice-league .titre{
-    text-transform : uppercase;
-    font-weight : bold;
-    margin : 30px 0;
-}
-#batman-cinema .description, #nemesis .description, #allies .description, #batman-justice-league .description{
-    margin-bottom : 40px;
-    text-align : justify;
-    width : 80%;
-    font-size : 21px;
-}
-#batman-cinema .personnage-info, #nemesis .personnage-info, #allies .personnage-info{
+.personnage-info{
     text-align : center;
 }
+
+#justice-league img{
+    width : 100%;
+    /* z-index: 99; */
+}
+.container .batman-fight{
+    width : 350px;
+    height : 250px;
+    position : absolute;
+    top : -200px;
+    right : -5%;
+}
+
+/*****Multimedia****/
 
 #multimedia .slider-multimedia{
     display : flex;
@@ -149,5 +224,135 @@ ul a:hover{
 }
 #multimedia .slider-content{
     padding : 15px;
-    background-color :#727272; 
+    background-color :#727272;
+    border-radius : 0 20px 20px 0;
+}
+#multimedia button{
+    position : relative;
+    top : 155px;
+    background : none;
+    border : none;
+}
+#multimedia button.right{
+    right : -85%;
+}
+#multimedia .yellow{
+    color : var(--yellow);
+}
+#bande-annonce{
+    width : 80vw;
+    height: 45vw;
+    max-width : 100%;
+    margin : 80px auto;
+    display : block;
+}
+
+
+
+/********************Contact ********************/
+
+#contact{
+    background-color : darkslategrey;
+    padding-bottom : 20px;
+}
+#contact .form{
+    width : 50%;
+    margin : 0 auto;
+}
+#contact h2{
+    text-align : center;
+    font-size : 26px;
+    margin-bottom : 32px;
+    text-transform : uppercase;
+}
+#contact .titre{
+    display : block;
+    margin : 20px 0;
+    text-transform : uppercase;
+}
+p.newstext{
+    max-width : 450px;
+}
+.choix-frequence, .news{
+    width : 80%;
+    margin : 20px 0;
+}
+#contact .form input[type='email'], #contact textarea{
+    display : block;
+    border-top : none;
+    border-left : none;
+    border-right : none;
+    border-bottom : 2px solid black;
+    width : 80%;
+    background-color : transparent;
+    padding : 10px 0;
+    /* background-color : red; */
+}
+#contact .icon img{
+    transform : rotate(90deg);
+    width : 19px;
+    height : 23px;
+    margin-left : 100px;
+}
+
+.btn-group{
+    padding : 10px;
+    display : flex;
+    justify-content : space-around;
+}
+.form input[type='radio']{
+    opacity : 0;
+}
+.btn-group label{
+    cursor : pointer;
+    padding : 10px;
+    border : 2px solid;
+    border-image : linear-gradient(69deg, red, blue) 1;
+}
+input[type='submit']{
+    display : block;
+    width: 230px;
+    margin : 25px auto;
+    padding : 15px 0;
+    cursor : pointer;
+
+    color : var(--white);
+    font-size : 22px;  
+    background : linear-gradient(80deg, var(--gradient-white),var(--gradient-red));
+    box-shadow : var(--black1) 5px 5px 60px;
+    
+}
+#citations{
+    padding : 150px 20%;
+}
+#citations .citation-carte{
+    text-align : center;
+    width : 50%;
+    margin : 0 auto;
+}
+#citations .citation-auteur{
+    padding-top : 30px;
+    font-size : 14px;
+}
+#citations .guillement-close{
+    float : right;
+}
+.clearfix{
+    clear : both;
+}
+footer .text-footer{
+    justify-content : center;
+    font-size : 14px;
+    padding : 15px 0;
+    display : flex;
+}
+footer .text-footer *{
+    margin : 0 5px;
+}
+footer .social-footer{
+    text-align: center;
+    margin-top : 50px 0;
+}
+footer .social-item{
+    padding : 15px;
 }
