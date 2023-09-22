@@ -20,8 +20,8 @@
     --white : #FFFFFF;
     --grey : #C4C4C4;
     --blue2 : #EDDEBF;
-    --gradient-white : #eddebf65;
-    --gradient-red : #890009a5;
+    --gradient-white : #eddebf;
+    --gradient-red : #890008;
 }
 
 /****************Règles générales appliquées sur toute la page**************/
@@ -48,20 +48,27 @@ body{
     height : 100%;
 
 }
+
+body a{
+    /* width : 150px !important; */
+    /* border : 2px solid blue; */
+    /* background-color : white */
+    /* transition : width 10s !important; */
+}
+body:active a{
+    /* border : 2px solid blue; */
+    /* box-sizing : border-box; */
+    /* background-color: blue !important;  */
+    /* width : 600px !important; */
+    /* background-color : white !important; */
+    /* position : absolute; */
+}
+
 main{
     width : 100%;
+    position : relative;
 }
-.cadre{
-    border: #727272 2px solid;
-    height : 1020vh;
-    position : absolute;
-    top : 132px;
-    left : 80px;
-    width : 85%;
-    /* left : 102px; */
-    opacity : 0.5;
-    z-index : -1;
-}
+
 /* .cadre2{
     border: red 2px solid;
     height : 100vh;
@@ -83,30 +90,74 @@ a{
     color : var(--white);
     font-size : 20px;
     font-weight : 500;
+    text-decoration : none;
 }
 h2.titre{
     margin : 20px 0;
     text-transform : uppercase;
     font-weight : bold;
+    margin-left : 7%;
 }
 h3{
     margin : 10px;
 }
+.cadre1{
+    border: #727272 2px solid;
+    border-top : none;
+    height : 150vh;
+    position : fixed;
+    /* top : 132px; */
+    top : -132px;
+    left : 147px;
+    right : 147px;
+    /* width : calc(100% - 160px); */
+    /* margin: 0 auto; */
+    /* left : 102px; */
+    opacity : 0.3;
+    /* z-index : 1; */
+}
+.cadre2{
+    border: #727272 2px solid;
+    border-top : none;
+    border-left : none;
+    border-right : none;
+    height : 132px;
+    position : absolute;
+    /* top : 132px; */
+    left : 147px;
+    right : 147px;
+    /* width : calc(100% - 160px); */
+    /* margin: 0 auto; */
+    /* left : 102px; */
+    opacity : 0.3;
+    /* z-index : 1; */
+}
+
 .scroll{
+    /* border : 1px solid white; */
     display: flex;
     flex-direction : column;
     align-items : center;
     position : fixed;
     right : 80px;
     top : 200px;
+    z-index : 99;
 
 }
 .scroll .social{
     margin : 15px;
 }
+section{
+    /* max-width : calc(100% - 300px);
+    margin : 0 auto; */
+}
 
-/****La barre de navigation***/
-
+/****Le header - La barre de navigation***/
+header ul a:hover{
+    font-weight : bold;
+    text-decoration : underline;
+    color : var(--yellow);
+}
 nav{
     display : flex;
     align-items : center;
@@ -117,15 +168,21 @@ ul{
     list-style : none;
 }
 
-ul a:hover{
-   color : var(--yellow);
+a, ul{
+    /* background-color : white; */
+    /* color :black; */
+    /* z-index : 9999999 !important; */
+    z-index : 999;
 }
-
+section>div{
+    /* z-index : 999; */
+}
 
 /***********La section #hero **********/
 #hero{
     background-image : url('../img/Illustrations/Bathome1.png');
     height: 850px;
+    width : 100%;
     background-position : top center;
     background-repeat : no-repeat;
     background-color : #19587d;
@@ -145,16 +202,27 @@ ul a:hover{
 #boutons{
     margin : 40px 0;
 }
+header a img:hover, .scroll img:hover, .social-footer img:hover{
+    filter : opacity(0.50) drop-shadow(0 0 0 var(--yellow));
+}
 #boutons .btn{
     text-decoration : none;
-    color : var(--white);
     font-size : 22px;
     padding : 10px 40px;
     
-    background : linear-gradient(80deg, var(--gradient-white),var(--gradient-red));
+    background : linear-gradient(90deg, var(--gradient-white),var(--gradient-red));
     box-shadow : var(--black1) 5px 5px 60px;
     margin : 15px;
     cursor : pointer !important;
+    opacity : 0.4;
+    
+}
+#boutons .btn:hover{
+    opacity : 1;
+}
+#boutons a.btn span{
+    /* color : rgba(255,255,255,1) !important; */
+    
 }
 #hero .texte{
     max-width : 400px;
@@ -182,19 +250,30 @@ ul a:hover{
     text-align : justify;
     font-size : 21px;
     margin-bottom : 40px;
+    margin-left : 7%;
 }
 #chauve-souris{
     width : 150px;
     height : 130px;
     position : absolute;
     top : -80px;
-    left : 60px;
+    left : calc(7% + 60px);
 }
 /*Les cards*/
 .batman-personnage{
     display : flex;
     justify-content : space-between;
     max-width : 85%;
+    margin : 0 auto;
+}
+.batman-item{
+    width : 304px;
+}
+.batman-item img{
+    width : 100%;
+}
+.batman-item:hover{
+    width : 334px;
 }
 .personnage-info{
     text-align : center;
@@ -202,7 +281,9 @@ ul a:hover{
 
 #justice-league img{
     width : 100%;
-    /* z-index: 99; */
+    /* border : 1px solid white; */
+    position : relative;
+    border-top: rgba(144,144,144,0.3) 2px solid;
 }
 .container .batman-fight{
     width : 350px;
@@ -240,8 +321,8 @@ ul a:hover{
     color : var(--yellow);
 }
 #bande-annonce{
-    width : 80vw;
-    height: 45vw;
+    width : 70vw;
+    height: 40vw;
     max-width : 100%;
     margin : 80px auto;
     display : block;
@@ -254,6 +335,7 @@ ul a:hover{
 #contact{
     background-color : darkslategrey;
     padding-bottom : 20px;
+    position : relative;
 }
 #contact .form{
     width : 50%;
@@ -356,3 +438,10 @@ footer .social-footer{
 footer .social-item{
     padding : 15px;
 }
+footer{
+    padding-bottom : 150px;
+}
+/* *{
+    transform : rotate(360deg);
+    transition-duration : 10s;
+} */
