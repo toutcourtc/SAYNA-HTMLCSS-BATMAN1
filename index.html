@@ -13,7 +13,7 @@
 
     
     <!-- <div class="wrapper"> -->
-    <header>
+    <header id="header">
         <nav class="container">
             <a href="index.html"><img src="img/logos/logohome.png" alt="Bat logo"></a>
             <ul class="menu">
@@ -28,11 +28,11 @@
         <div class="cadre1"></div>
         <div class="cadre2"></div>
         <div class="scroll">
-            <a href="#"><img class="social" src="img/Logos/logo_bat_flèche.png" alt="logo bat fleche"></a>
-            <a href="#"><img class="social" src="img/Logos/icon_facebook.png" alt="FB"></a>
-            <a href="#"><img class="social" src="img/Logos/icon_ig.png" alt="IG"></a>
-            <a href="#"><img class="social" src="img/Logos/icon_tw.png" alt="twitter"></a>
-            <a href="#"><img class="social" src="img/Logos/logo_bat_flèche_2.png" alt="logo 2 bat fleche"></a>
+            <a href="#header"><img class="social" src="img/Logos/logo_bat_flèche.png" alt="logo bat fleche"></a>
+            <a href="https://facebook.com/batman"><img class="social" src="img/Logos/icon_facebook.png" alt="FB"></a>
+            <a href="http://instangram.com/batman"><img class="social" src="img/Logos/icon_ig.png" alt="IG"></a>
+            <a href="https://twitter.com/batman"><img class="social" src="img/Logos/icon_tw.png" alt="twitter"></a>
+            <a href="#contact"><img class="social" src="img/Logos/logo_bat_flèche_2.png" alt="logo 2 bat fleche"></a>
         </div>
         <section id="hero">
             <div class="content">
@@ -232,12 +232,20 @@
                         <input type="checkbox" name="newsletter" id="newsletter"><br>
                     </p>
                     <div class="choix-frequence">
-                        <span>Choisissez la fréquence à laquelle vous souhaitez recevoir votre newsletter</span>
+                        <p>Choisissez la fréquence à laquelle vous souhaitez recevoir votre newsletter</p>
+                    
+                    <div class="choix-freq">
+                        <select id="frequence">
+                            <option value="jour">Par jour</option>
+                            <option value="semaine">Par semaine</option>
+                            <option value="mois">Par mois</option>                            
+                        </select>
                         <span class="icon">
                             <img src="img/logos/icon_flèche_2.png" alt="Flèche bas">
-                        </span>
-                        <hr>
+                        </span>                        
                     </div>
+                    </div>
+                    
                     <div class="news">
                         <p>Souhaitez-vous recevoir des news</p>
                         <hr>
@@ -292,17 +300,14 @@
                 <div class="social-footer">
                     <!-- <a href="#" class="social-item"> -->
                     <a href="#"><img src="img/logos/logo_sayna_white.png" alt="Sayna"
-                            style="background-color : black"></a>
-                    <a href="#"><img src="img/logos/icon_x.png" alt="X" style="background-color : black"></a>
-                    <a href="#"><img src="img/logos/icon_DC.png" alt="DC" style="background-color : black"></a>
+                        ></a>
+                    <a href="#"><img src="img/logos/icon_x.png" alt="X"></a>
+                    <a href="#"><img src="img/logos/icon_DC.png" alt="DC"></a>
 
 
-                    <a href="" class="social-item"><img src="img/logos/icon_facebook.png" alt="FB"
-                            style="background-color : black"></a>
-                    <a href="" class="social-item"><img src="img/Logos/icon_ig.png" alt="IG"
-                            style="background-color : black"></a>
-                    <a href="" class="social-item"><img src="img/Logos/icon_tw.png" alt="Twitter"
-                            style="background-color : black"></a>
+                    <a href="https://facebook.com/batman" class="social-item"><img src="img/logos/icon_facebook.png" alt="FB"s></a>
+                    <a href="http://instangram.com/batman" class="social-item"><img src="img/Logos/icon_ig.png" alt="IG"s></a>
+                    <a href="https://twitter.com/batman" class="social-item"><img src="img/Logos/icon_tw.png" alt="Twitter"s></a>
                 </div>
             </div>
         </footer>

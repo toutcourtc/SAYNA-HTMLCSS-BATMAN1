@@ -102,14 +102,14 @@ h3{
     margin : 10px;
 }
 .cadre1{
-    border: #727272 2px solid;
+    border: #BCBBBD 2px solid;
     border-top : none;
     height : 150vh;
     position : fixed;
     /* top : 132px; */
     top : -132px;
-    left : 147px;
-    right : 147px;
+    left : 102px;
+    right : 102px;
     /* width : calc(100% - 160px); */
     /* margin: 0 auto; */
     /* left : 102px; */
@@ -117,15 +117,15 @@ h3{
     /* z-index : 1; */
 }
 .cadre2{
-    border: #727272 2px solid;
+    border: #BCBBBD 2px solid;
     border-top : none;
     border-left : none;
     border-right : none;
     height : 132px;
     position : absolute;
     /* top : 132px; */
-    left : 147px;
-    right : 147px;
+    left : 102px;
+    right : 102px;
     /* width : calc(100% - 160px); */
     /* margin: 0 auto; */
     /* left : 102px; */
@@ -176,6 +176,18 @@ a, ul{
 }
 section>div{
     /* z-index : 999; */
+}
+/* Animation des éléments  l'entrée */
+@keyframes entree{
+    from{
+        transform : translate(-1200px);
+    }
+    to{
+        transform : translate(0px);
+    }
+}
+*{
+    animation : entree 3s;
 }
 
 /***********La section #hero **********/
@@ -355,10 +367,7 @@ header a img:hover, .scroll img:hover, .social-footer img:hover{
 p.newstext{
     max-width : 450px;
 }
-.choix-frequence, .news{
-    width : 80%;
-    margin : 20px 0;
-}
+
 #contact .form input[type='email'], #contact textarea{
     display : block;
     border-top : none;
@@ -370,11 +379,39 @@ p.newstext{
     padding : 10px 0;
     /* background-color : red; */
 }
+.choix-frequence, .news{
+    width : 90%;
+    margin : 20px 0;
+    display : flex;
+    justify-content : space-between;
+    /* display : inline-block; */
+}
+#contact .choix-freq{
+    /* display : inline-block; */
+    display : flex;
+}
+#contact *{
+    border : 1px solid white;
+}
+#contact .icon{
+    width : 25px;
+    border : 1px solid red;
+}
 #contact .icon img{
-    transform : rotate(90deg);
     width : 19px;
     height : 23px;
-    margin-left : 100px;
+    /* margin-left : 100px; */
+}
+#contact .icon img:hover{
+    transform : rotate(90deg);
+}
+#contact .icon img:hover #frequence{
+    /* visibility : visible; */
+    display : block;
+}
+#frequence{
+    /* visibility:hidden; */
+    display : none;
 }
 
 .btn-group{
@@ -441,7 +478,8 @@ footer .social-item{
 footer{
     padding-bottom : 150px;
 }
-/* *{
-    transform : rotate(360deg);
-    transition-duration : 10s;
-} */
+body:active img{
+    transform : rotate(360deg) !important;
+    animation-duration : 5s !important;
+}
+
