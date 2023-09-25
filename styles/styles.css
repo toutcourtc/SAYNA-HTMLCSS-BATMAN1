@@ -32,56 +32,28 @@
     box-sizing : border-box;
 }
 
-.container{
+#body .container{
     width : 80%;
     margin : 0 auto;
     position : relative;
+    border : 1px solid white;
 }
-html{
-    height : 100%;
-}
-body{
+body#body{
     background-color : black;
     color : white;
     font-family : 'space_grotesk';
     font-weight : 300;
-    height : 100%;
-
+    border : 1px solid white;
 }
 
-body a{
-    /* width : 150px !important; */
-    /* border : 2px solid blue; */
-    /* background-color : white */
-    /* transition : width 10s !important; */
-}
-body:active a{
-    /* border : 2px solid blue; */
-    /* box-sizing : border-box; */
-    /* background-color: blue !important;  */
-    /* width : 600px !important; */
-    /* background-color : white !important; */
-    /* position : absolute; */
-}
 
 main{
     width : 100%;
     position : relative;
+    border : 1px solid white;
 }
 
-/* .cadre2{
-    border: red 2px solid;
-    height : 100vh;
-    position : absolute;
-    top : 132px;
-    left : 80px;
-    width : 85%;
-    /* left : 102px; */
-    /*opacity : 0.5;
-    z-index : 999;
-} */
-
-button{
+.btn, .btn-group label{
     font-family : 'rajdhani';
     font-size : 20px;
     font-weight :400;
@@ -106,15 +78,10 @@ h3{
     border-top : none;
     height : 150vh;
     position : fixed;
-    /* top : 132px; */
     top : -132px;
     left : 102px;
     right : 102px;
-    /* width : calc(100% - 160px); */
-    /* margin: 0 auto; */
-    /* left : 102px; */
     opacity : 0.3;
-    /* z-index : 1; */
 }
 .cadre2{
     border: #BCBBBD 2px solid;
@@ -123,18 +90,12 @@ h3{
     border-right : none;
     height : 132px;
     position : absolute;
-    /* top : 132px; */
     left : 102px;
     right : 102px;
-    /* width : calc(100% - 160px); */
-    /* margin: 0 auto; */
-    /* left : 102px; */
     opacity : 0.3;
-    /* z-index : 1; */
 }
 
 .scroll{
-    /* border : 1px solid white; */
     display: flex;
     flex-direction : column;
     align-items : center;
@@ -147,12 +108,12 @@ h3{
 .scroll .social{
     margin : 15px;
 }
-section{
-    /* max-width : calc(100% - 300px);
-    margin : 0 auto; */
-}
-
 /****Le header - La barre de navigation***/
+header ul a{
+    color : white;
+    text-decoration : none;
+    text-transform : uppercase;
+}
 header ul a:hover{
     font-weight : bold;
     text-decoration : underline;
@@ -167,15 +128,8 @@ nav{
 ul{
     list-style : none;
 }
-
 a, ul{
-    /* background-color : white; */
-    /* color :black; */
-    /* z-index : 9999999 !important; */
     z-index : 999;
-}
-section>div{
-    /* z-index : 999; */
 }
 /* Animation des éléments  l'entrée */
 @keyframes entree{
@@ -186,7 +140,7 @@ section>div{
         transform : translate(0px);
     }
 }
-*{
+.titre, #boutons, .scroll, p, .batman-item, #header{
     animation : entree 3s;
 }
 
@@ -199,7 +153,6 @@ section>div{
     background-repeat : no-repeat;
     background-color : #19587d;
     background-size : cover;
-    /* z-index : -9; */
 }
 
 .content{
@@ -232,10 +185,6 @@ header a img:hover, .scroll img:hover, .social-footer img:hover{
 #boutons .btn:hover{
     opacity : 1;
 }
-#boutons a.btn span{
-    /* color : rgba(255,255,255,1) !important; */
-    
-}
 #hero .texte{
     max-width : 400px;
     margin : 0 auto 40px auto;
@@ -244,13 +193,12 @@ header a img:hover, .scroll img:hover, .social-footer img:hover{
 
 #hero .fleche{
     display : block;
+    position : relative;
     margin : 0 auto;
     margin-top: 500px;
+    z-index : 999;
 
 }
-
-
-
 
 /************Section #batman-cinema, #nemesis, #allies, #justice-league******/
 #batman-cinema, #nemesis, #allies, #justice-league{
@@ -276,7 +224,7 @@ header a img:hover, .scroll img:hover, .social-footer img:hover{
     display : flex;
     justify-content : space-between;
     max-width : 85%;
-    margin : 0 auto;
+    margin : 0 auto !important;
 }
 .batman-item{
     width : 304px;
@@ -293,7 +241,6 @@ header a img:hover, .scroll img:hover, .social-footer img:hover{
 
 #justice-league img{
     width : 100%;
-    /* border : 1px solid white; */
     position : relative;
     border-top: rgba(144,144,144,0.3) 2px solid;
 }
@@ -348,6 +295,7 @@ header a img:hover, .scroll img:hover, .social-footer img:hover{
     background-color : darkslategrey;
     padding-bottom : 20px;
     position : relative;
+    line-height : 1.5;
 }
 #contact .form{
     width : 50%;
@@ -377,47 +325,46 @@ p.newstext{
     width : 80%;
     background-color : transparent;
     padding : 10px 0;
-    /* background-color : red; */
 }
-.choix-frequence, .news{
-    width : 90%;
-    margin : 20px 0;
-    display : flex;
-    justify-content : space-between;
-    /* display : inline-block; */
-}
-#contact .choix-freq{
-    /* display : inline-block; */
-    display : flex;
-}
-#contact *{
-    border : 1px solid white;
-}
-#contact .icon{
-    width : 25px;
-    border : 1px solid red;
-}
-#contact .icon img{
-    width : 19px;
-    height : 23px;
-    /* margin-left : 100px; */
-}
-#contact .icon img:hover{
-    transform : rotate(90deg);
-}
-#contact .icon img:hover #frequence{
-    /* visibility : visible; */
-    display : block;
-}
-#frequence{
-    /* visibility:hidden; */
+.freq-tab{
+    color : white;
     display : none;
 }
+#choix-frequence img{
+    width : 19px;
+    height : 23px;
+}
+#choix-frequence:hover img{
+    transform : rotate(90deg);
+    transition-duration : 0.1s;
+}
+#choix-frequence:hover .freq-tab{
+    display : block;
+}
 
+#choix-frequence p{
+    display : flex;
+    justify-content : space-between;
+}
+
+.freq-item{
+    border-bottom : 1px solid white;
+}
+.freq-item label{
+    display : block;
+    line-height : 2;
+    width : 100%;
+}
 .btn-group{
     padding : 10px;
     display : flex;
     justify-content : space-around;
+}
+.btn-group label{
+    opacity : 0.4;
+}
+.btn-group label:hover{
+    opacity : 1;
 }
 .form input[type='radio']{
     opacity : 0;
@@ -478,8 +425,60 @@ footer .social-item{
 footer{
     padding-bottom : 150px;
 }
-body:active img{
-    transform : rotate(360deg) !important;
-    animation-duration : 5s !important;
-}
 
+/* Gestion de l'affichage sur mobile */
+@media screen and (max-width:576px){
+    .cadre1, .cadre2, .scroll{
+        display : none;
+    }
+    #body .container{
+        /* width : 100%; */
+    }
+    #header{
+        position :relative;
+    }
+    #header nav{
+        position : fixed !important;
+        border : 3px solid white;
+        z-index : 9999;
+        margin : 0 auto;
+        top : 0;
+        left : 0;
+        right : 0;
+    }
+    .titre{
+        text-align : center;
+    }
+    .description{
+        margin-left : 3px;
+    }
+    .batman-item{
+        border : 1px solid white;
+    }
+    .conatainer{
+        justify-content : center;
+    }
+    .batman-fight{
+        display : none;
+        /* position : relative;
+        border : 1px solid white;
+        top : 0;
+        left : 0; */
+    }
+    .justice-img{
+        width : 100vw;
+    }
+    #multimedia .left, #multimedia .right{
+        /* display : none; */
+    }
+    .slider-multimedia{
+        border : 1px solid red;
+        margin : 0;
+    }
+    .slider-multimedia .slider-content{
+        
+        border : 1px solid white;
+        width : 100vw;
+        border-radius : 0; 
+    }
+}

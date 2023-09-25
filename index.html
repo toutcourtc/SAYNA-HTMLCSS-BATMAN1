@@ -6,19 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="styles/styles.css">
 
+    <!-- Intégration de bootstrap pour gérer le reponsive design -->
+    <link rel="stylesheet" type="text/css" href="styles/bootstrap-5.2.3-dist/css/bootstrap.min.css">
+
     <title>Batman</title>
 </head>
 
-<body>
 
-    
-    <!-- <div class="wrapper"> -->
+<body id="body">
     <header id="header">
         <nav class="container">
             <a href="index.html"><img src="img/logos/logohome.png" alt="Bat logo"></a>
             <ul class="menu">
                 <li><a href="index.html">Home</a></li>
-
             </ul>
         </nav>
     </header>
@@ -50,8 +50,9 @@
                     </div>
                 </div>
             </div>
-            <img class="fleche" src="img/Logos/flèche_down_header.png" alt="flèche">
+            <a href="#citations"><img class="fleche" src="img/Logos/flèche_down_header.png" alt="flèche"></a>
         </section>
+        <!-- <a href="#contact" id="fleche-down"><img class="fleche" src="img/Logos/flèche_down_header.png" alt="flèche"></a> -->
         <section id="batman-cinema">
             <div class="container">
                 <h2 class="titre">Batman au cinéma</h2>
@@ -63,22 +64,22 @@
                     par Lewis Wilson et bénéficiera de nombreux reboot, donnant l’occasion à de multiples
                     acteurs d’interpréter l’homme chauve-souris. Voici les trois derniers :
                 </p>
-                <div class="batman-personnage">
-                    <div class="batman-item">
+                <div class="batman-personnage row">
+                    <div class="batman-item col-12 col-sm-6 col-lg-4 ">
                         <img src="img/Illustrations/Bathome2.png" alt="Film Batman">
                         <div class="personnage-info">
                             <h3 class="acteur">Robert Pattinson</h3>
                             <p>(2022)</p>
                         </div>
                     </div>
-                    <div class="batman-item">
+                    <div class="batman-item col-12 col-sm-6 col-lg-4">
                         <img src="img/Illustrations/Bathome3.png" alt="Film Batman">
                         <div class="personnage-info">
                             <h3 class="acteur">Christian Bale</h3>
                             <p>(2006 - 2008 - 2012)</p>
                         </div>
                     </div>
-                    <div class="batman-item">
+                    <div class="batman-item col-12 col-sm-6 col-lg-4">
                         <img src="img/Illustrations/Bathome4.png" alt="Film Batman">
                         <div class="personnage-info">
                             <h3 class="acteur">Ben Affleck</h3>
@@ -100,22 +101,22 @@
                     des antagonistes qui défient l’imagination et les lois de la physique. Parmi les derniers
                     ennemis emblématiques que nous avons pu voir au cinéma, on retrouve : :
                 </p>
-                <div class="batman-personnage">
-                    <div class="batman-item">
+                <div class="batman-personnage row">
+                    <div class="batman-item col-12 col-sm-6 col-lg-4">
                         <img src="img/Illustrations/Bathome5.png" alt="Image méchant">
                         <div class="personnage-info">
                             <h3>The Riddler - Paul Dano</h3>
                             <p>(2022)</p>
                         </div>
                     </div>
-                    <div class="batman-item">
+                    <div class="batman-item col-12 col-sm-6 col-lg-4">
                         <img src="img/Illustrations/Bathome6.png" alt="Image méchant">
                         <div class="personnage-info">
                             <h3>Le joker - Heath Ledger</h3>
                             <p>2008</p>
                         </div>
                     </div>
-                    <div class="batman-item">
+                    <div class="batman-item col-12 col-sm-6 col-lg-4">
                         <img src="img/Illustrations/Bathome7.png" alt="Image méchant">
                         <div class="personnage-info">
                             <h3>Dark Seid - Ray Porter</h3>
@@ -138,22 +139,22 @@
                     police, Bruce pourra compter sur l’aide infaillible de James Gordon, “Jim”, qui désire lui aussi
                     nettoyer sa ville de la criminalité qui y règne.
                 </p>
-                <div class="batman-personnage">
-                    <div class="batman-item">
+                <div class="batman-personnage row">
+                    <div class="batman-item col-12 col-sm-6 col-lg-4">
                         <img src="img/Illustrations/Bathome9.png" alt="Image allié">
                         <div class="personnage-info">
                             <h3>Alfred Pennyworth - Michael Cain</h3>
                             <p>(2006 - 2008 - 2012)</p>
                         </div>
                     </div>
-                    <div class="batman-item">
+                    <div class="batman-item col-12 col-sm-6 col-lg-4">
                         <img src="img/Illustrations/Bathome8.png" alt="Image allié">
                         <div class="personnage-info">
                             <h3>Catwoman - Zoé Kravitz</h3>
                             <p>2008</p>
                         </div>
                     </div>
-                    <div class="batman-item">
+                    <div class="batman-item col-12 col-sm-6 col-lg-4">
                         <img src="img/Illustrations/Bathome10.png" alt="Image allié">
                         <div class="personnage-info">
                             <h3>James Gordon</h3>
@@ -190,7 +191,7 @@
                     <a href="#multimedia"><img src="img/Logos/icon_flèche_2.png" alt="Flèche droite"></a>
                 </button>
 
-                <div class="slider-multimedia">
+                <div class="slider-multimedia row">
                     <div class="slider-image">
                         <img src="img/Illustrations/Bathome_ba1.png" alt="Batman Begins">
                     </div>
@@ -231,34 +232,34 @@
                         Batman :
                         <input type="checkbox" name="newsletter" id="newsletter"><br>
                     </p>
-                    <div class="choix-frequence">
-                        <p>Choisissez la fréquence à laquelle vous souhaitez recevoir votre newsletter</p>
+                    <div id="choix-frequence">
+                        <p>
+                            <span>Choisissez la fréquence à laquelle vous souhaitez recevoir votre newsletter</span>
+                            <span><img src="img/logos/icon_flèche_2.png" alt="Flèche bas"></span>
+                        </p>
+                        <ul class="freq-tab">
+                            <li class="freq-item"><label for="hebdomadaire">Une fois par semaine<input type='radio' name='frequence' id='hebdomadaire' value='hebdomadaire'></label></li>
+                            <li class="freq-item"><label for="bimensuelle">Deux fois par mois<input type='radio' name='frequence' id='bimensuelle' value='bimensuelle'></label></li>
+                            <li class="freq-item"><label for="mensuelle">Une fois par mois<input type='radio' name='frequence' id='mensuelle' value='mensuelle'></label></li>
+                            <li class="freq-item"><label for="trimestrielle">Une fois tous les trois mois<input type='radio' name='frequence' id='trimestrielle' value='trimestrielle'></label></li>
+                            <li class="freq-item"><label for="semestrielle">Une fois tous les 6 mois<input type='radio' name='frequence' id='semestrielle' value='semestrielle'></label></li>
+                        </ul>
+                    </div>
                     
-                    <div class="choix-freq">
-                        <select id="frequence">
-                            <option value="jour">Par jour</option>
-                            <option value="semaine">Par semaine</option>
-                            <option value="mois">Par mois</option>                            
-                        </select>
-                        <span class="icon">
-                            <img src="img/logos/icon_flèche_2.png" alt="Flèche bas">
-                        </span>                        
-                    </div>
-                    </div>
                     
                     <div class="news">
                         <p>Souhaitez-vous recevoir des news</p>
-                        <hr>
 
                     </div>
                     <div class="btn-group">
-                        <input type="radio" id="film">
+                        <input type="radio" name="news" id="film" value="film">
                         <label for="film">Des films</label>
-                        <input type="radio" id="comics">
+                        <input type="radio" name="news" id="comics" value="comics">
                         <label for="comics">Des comics</label>
-                        <input type="radio" id="tout">
+                        <input type="radio" name="news" id="tout" value="tout">
                         <label for="tout">De tout</label>
                     </div>
+                    
 
                     <p class="titre">Message</p>
                     <textarea id="message" name="message" placeholder="Laissez un commentaire pour la communauté"
@@ -311,8 +312,9 @@
                 </div>
             </div>
         </footer>
+        <!-- Intégration JS de bootstrap -->
+        <script src="styles/bootstrap-5.2.3-dist/js/bootstrap.min.js"></script>
     </main>
-    <!-- </div> -->
 
 </body>
 
