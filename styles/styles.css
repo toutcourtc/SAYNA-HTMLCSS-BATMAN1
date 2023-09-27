@@ -23,6 +23,18 @@
     --gradient-white : #eddebf;
     --gradient-red : #890008;
 }
+/* Animation des éléments  l'entrée */
+@keyframes entree{
+    from{
+        transform : translate(-1200px);
+    }
+    to{
+        transform : translate(0px);
+    }
+}
+.titre, #boutons, .scroll, p, .batman-item, #header{
+    animation : entree 3s;
+}
 
 /****************Règles générales appliquées sur toute la page**************/
 
@@ -36,28 +48,18 @@
     width : 80%;
     margin : 0 auto;
     position : relative;
-    border : 1px solid white;
 }
 body#body{
     background-color : black;
     color : white;
     font-family : 'space_grotesk';
     font-weight : 300;
-    border : 1px solid white;
 }
-
-
 main{
     width : 100%;
     position : relative;
-    border : 1px solid white;
 }
 
-.btn, .btn-group label{
-    font-family : 'rajdhani';
-    font-size : 20px;
-    font-weight :400;
-}
 a{
     color : var(--white);
     font-size : 20px;
@@ -103,7 +105,6 @@ h3{
     right : 80px;
     top : 200px;
     z-index : 99;
-
 }
 .scroll .social{
     margin : 15px;
@@ -131,18 +132,7 @@ ul{
 a, ul{
     z-index : 999;
 }
-/* Animation des éléments  l'entrée */
-@keyframes entree{
-    from{
-        transform : translate(-1200px);
-    }
-    to{
-        transform : translate(0px);
-    }
-}
-.titre, #boutons, .scroll, p, .batman-item, #header{
-    animation : entree 3s;
-}
+
 
 /***********La section #hero **********/
 #hero{
@@ -173,6 +163,7 @@ header a img:hover, .scroll img:hover, .social-footer img:hover{
 #boutons .btn{
     text-decoration : none;
     font-size : 22px;
+    color : white;
     padding : 10px 40px;
     
     background : linear-gradient(90deg, var(--gradient-white),var(--gradient-red));
@@ -197,7 +188,6 @@ header a img:hover, .scroll img:hover, .social-footer img:hover{
     margin : 0 auto;
     margin-top: 500px;
     z-index : 999;
-
 }
 
 /************Section #batman-cinema, #nemesis, #allies, #justice-league******/
@@ -223,17 +213,17 @@ header a img:hover, .scroll img:hover, .social-footer img:hover{
 .batman-personnage{
     display : flex;
     justify-content : space-between;
-    max-width : 85%;
+    width : 85%;
     margin : 0 auto !important;
 }
 .batman-item{
-    width : 304px;
+    width : 304px !important;
 }
 .batman-item img{
-    width : 100%;
+    max-width : 100%;
 }
 .batman-item:hover{
-    width : 334px;
+    width : 334px !important;
 }
 .personnage-info{
     text-align : center;
@@ -286,7 +276,6 @@ header a img:hover, .scroll img:hover, .social-footer img:hover{
     margin : 80px auto;
     display : block;
 }
-
 
 
 /********************Contact ********************/
@@ -366,6 +355,11 @@ p.newstext{
 .btn-group label:hover{
     opacity : 1;
 }
+.btn, .btn-group label{
+    font-family : 'rajdhani';
+    font-size : 20px;
+    font-weight :400;
+}
 .form input[type='radio']{
     opacity : 0;
 }
@@ -386,7 +380,10 @@ input[type='submit']{
     font-size : 22px;  
     background : linear-gradient(80deg, var(--gradient-white),var(--gradient-red));
     box-shadow : var(--black1) 5px 5px 60px;
-    
+    opacity : 0.4;
+}
+input[type='submit']:hover{
+    opacity : 1;
 }
 #citations{
     padding : 150px 20%;
@@ -400,12 +397,14 @@ input[type='submit']{
     padding-top : 30px;
     font-size : 14px;
 }
-#citations .guillement-close{
+#citations .guillemet-close{
     float : right;
 }
 .clearfix{
     clear : both;
 }
+
+/***************** Footer ***************/
 footer .text-footer{
     justify-content : center;
     font-size : 14px;
@@ -426,59 +425,3 @@ footer{
     padding-bottom : 150px;
 }
 
-/* Gestion de l'affichage sur mobile */
-@media screen and (max-width:576px){
-    .cadre1, .cadre2, .scroll{
-        display : none;
-    }
-    #body .container{
-        /* width : 100%; */
-    }
-    #header{
-        position :relative;
-    }
-    #header nav{
-        position : fixed !important;
-        border : 3px solid white;
-        z-index : 9999;
-        margin : 0 auto;
-        top : 0;
-        left : 0;
-        right : 0;
-    }
-    .titre{
-        text-align : center;
-    }
-    .description{
-        margin-left : 3px;
-    }
-    .batman-item{
-        border : 1px solid white;
-    }
-    .conatainer{
-        justify-content : center;
-    }
-    .batman-fight{
-        display : none;
-        /* position : relative;
-        border : 1px solid white;
-        top : 0;
-        left : 0; */
-    }
-    .justice-img{
-        width : 100vw;
-    }
-    #multimedia .left, #multimedia .right{
-        /* display : none; */
-    }
-    .slider-multimedia{
-        border : 1px solid red;
-        margin : 0;
-    }
-    .slider-multimedia .slider-content{
-        
-        border : 1px solid white;
-        width : 100vw;
-        border-radius : 0; 
-    }
-}

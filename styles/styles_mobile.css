@@ -1,0 +1,145 @@
+/* Gestion de l'affichage sur mobile */
+@media screen and (max-width:576px){
+    /************Règles générales**************/
+    .cadre1, .cadre2{
+        display : none;
+    }
+    .scroll{
+        right : 0px;
+        top : 20vh;
+        
+        width : 40px;
+    }
+    .scroll .fleche{
+        width : 40px;
+        height:37px;
+    }
+
+    /****************Le header****************/
+    #header{
+        position :relative;
+    }
+    #header nav{
+        position : fixed !important;
+        z-index : 9999;
+        margin : 0 auto;
+        top : 0;
+        left : 0;
+        right : 0;
+    }
+    /******************Section #hero*************/
+    #hero{
+        height : 600px;
+    }
+    #hero .content{
+        width : 100%;
+    }
+    #hero #boutons .btn{
+        font-size : 18px;
+        margin : 3px;
+        padding : 3px;
+        width : 150px;
+        opacity : 1;
+    }
+    #hero .content .texte{
+        text-align : justify;
+    }
+    #hero .fleche{
+        margin-top : 0;
+    }
+
+    /****************Section #batman-cinema****************/
+
+    #batman-cinema{
+        padding : 3px;
+    }
+
+    .titre{
+        text-align : center;
+    }
+    .description{
+        margin-left : 3px;
+    }
+    .batman-item{
+        margin : 0 auto;
+    }
+    div.batman-personnage{
+        width : 100%;
+    }
+    .batman-item{
+        padding : 0 !important;
+    }
+    .batman-fight{
+        display : none;
+    }
+
+    /***************Section #justice-league*****************/
+    .justice-img{
+        width : 100vw;
+    }
+
+
+    /**********************Section #multimedia***************/
+    #multimedia .slider-multimedia{
+        margin : 0;
+        width : 100%;
+        flex-direction: column;
+    }
+    #multimedia .slider-image img{
+        width : 100%;
+    }
+    #multimedia .slider-content{
+        border-radius : 0;
+        width : 100%;
+        text-align : justify;
+    }
+    .slider-multimedia .slider-content{
+        width : 100vw;
+        border-radius : 0; 
+    }
+    #multimedia button img{
+        width : 19px;
+        height : 25px;
+    }
+    #multimedia button.right{
+        position : absolute;
+        right : -10%;
+    }
+    #multimedia button.left{
+        position : absolute;
+        left : -10%;
+    }
+    #bande-annonce{
+        width : 100vw;
+        height : 57vw;
+    }
+
+    /********************Section #contact ******************/
+    
+    #contact .form{
+        width : 100%;
+        padding : 5px;
+    }
+    .btn-group label{
+        font-size : 16px;
+        opacity : 1;
+    }
+    #contact #message{
+        width : 100%;
+        border : 1px solid black;
+    }
+    #citations{
+        padding : 0;
+    }
+    #citations .guillemet-open img, #citations .guillemet-close img {
+        width : 30px;
+        height : 22px;
+    }
+    #citations .citation-carte{
+        width : 100%;
+    }
+    footer .text-footer{
+        display : block;
+    }
+
+}

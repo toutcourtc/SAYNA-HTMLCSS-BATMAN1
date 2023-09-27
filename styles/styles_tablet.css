@@ -1,0 +1,43 @@
+/*************************Gestion de l'affichage sur tablette*************************/
+@media screen and (min-width:576px) and (max-width:992px){
+    /******************Règles générales*********************/
+    .scroll{
+        right : 0px;
+        top : 20vh;
+        border : 2px solid red;
+        width : 40px;
+    }
+    .scroll .fleche{
+        width : 40px;
+        height:37px;
+    }
+    /************************Hero *************************/
+    
+    #hero #boutons .btn{
+        font-size : 18px;
+        margin : 3px;
+        padding : 3px;
+        width : 150px;
+        opacity : 1;
+    }
+    #hero .fleche{
+        margin-top : 250px;
+    }
+
+    .batman-item{
+
+        margin : 0 auto;
+    }
+    /*******************************Multimedia***************************/
+    #multimedia .slider-multimedia{
+        flex-direction : column;
+    }
+    #multimedia .slider-content{
+        border-radius : 0;
+    }
+    #multimedia .slider-image img{
+        display : block;
+        margin : 0 auto;
+    }
+    
+}

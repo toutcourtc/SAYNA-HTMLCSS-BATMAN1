@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="styles/styles.css">
+    <link rel="stylesheet" type="text/css" href="styles/styles_mobile.css">
+    <link rel="stylesheet" type="text/css" href="styles/styles_tablet.css">
 
     <!-- Intégration de bootstrap pour gérer le reponsive design -->
     <link rel="stylesheet" type="text/css" href="styles/bootstrap-5.2.3-dist/css/bootstrap.min.css">
@@ -12,7 +14,13 @@
     <title>Batman</title>
 </head>
 
-
+<div class="scroll">
+    <a href="#header"><img class="social fleche" src="img/Logos/logo_bat_flèche.png" alt="logo bat fleche"></a>
+    <a href="https://facebook.com/batman"><img class="social" src="img/Logos/icon_facebook.png" alt="FB"></a>
+    <a href="http://instangram.com/batman"><img class="social" src="img/Logos/icon_ig.png" alt="IG"></a>
+    <a href="https://twitter.com/batman"><img class="social" src="img/Logos/icon_tw.png" alt="twitter"></a>
+    <a href="#contact"><img class="social fleche" src="img/Logos/logo_bat_flèche_2.png" alt="logo 2 bat fleche"></a>
+</div>
 <body id="body">
     <header id="header">
         <nav class="container">
@@ -27,13 +35,7 @@
 
         <div class="cadre1"></div>
         <div class="cadre2"></div>
-        <div class="scroll">
-            <a href="#header"><img class="social" src="img/Logos/logo_bat_flèche.png" alt="logo bat fleche"></a>
-            <a href="https://facebook.com/batman"><img class="social" src="img/Logos/icon_facebook.png" alt="FB"></a>
-            <a href="http://instangram.com/batman"><img class="social" src="img/Logos/icon_ig.png" alt="IG"></a>
-            <a href="https://twitter.com/batman"><img class="social" src="img/Logos/icon_tw.png" alt="twitter"></a>
-            <a href="#contact"><img class="social" src="img/Logos/logo_bat_flèche_2.png" alt="logo 2 bat fleche"></a>
-        </div>
+        
         <section id="hero">
             <div class="content">
                 <div class="container">
@@ -52,7 +54,7 @@
             </div>
             <a href="#citations"><img class="fleche" src="img/Logos/flèche_down_header.png" alt="flèche"></a>
         </section>
-        <!-- <a href="#contact" id="fleche-down"><img class="fleche" src="img/Logos/flèche_down_header.png" alt="flèche"></a> -->
+        
         <section id="batman-cinema">
             <div class="container">
                 <h2 class="titre">Batman au cinéma</h2>
@@ -65,7 +67,7 @@
                     acteurs d’interpréter l’homme chauve-souris. Voici les trois derniers :
                 </p>
                 <div class="batman-personnage row">
-                    <div class="batman-item col-12 col-sm-6 col-lg-4 ">
+                    <div class="batman-item col-12 col-sm-6 col-lg-4">
                         <img src="img/Illustrations/Bathome2.png" alt="Film Batman">
                         <div class="personnage-info">
                             <h3 class="acteur">Robert Pattinson</h3>
@@ -191,8 +193,8 @@
                     <a href="#multimedia"><img src="img/Logos/icon_flèche_2.png" alt="Flèche droite"></a>
                 </button>
 
-                <div class="slider-multimedia row">
-                    <div class="slider-image">
+                <div class="slider-multimedia">
+                    <div class="slider-image ">
                         <img src="img/Illustrations/Bathome_ba1.png" alt="Batman Begins">
                     </div>
                     <div class="slider-content">
@@ -271,7 +273,7 @@
         </section>
         <section id="citations">
             <div class="container">
-                <div class="guillement-open">
+                <div class="guillemet-open">
                     <img src="img/Logos/icon_guillemets_1.png" alt="Guillemets">
                 </div>
                 <div class="citation-carte">
@@ -285,7 +287,7 @@
 
                     </div>
                 </div>
-                <div class="guillement-close">
+                <div class="guillemet-close">
                     <img src="img/Logos/icon_guillemets_2.png" alt="Guillemets">
                 </div>
                 <div class="clearfix"></div>
@@ -294,12 +296,11 @@
         <footer>
             <div class="container">
                 <div class="text-footer">
-                    <img src="img/logos/icon_WB.png" alt="Warner Bros" style="background-color:black">
+                    <img src="img/logos/icon_WB.png" alt="Warner Bros">
                     <p>Ce projet respecte l’univers cinématographique des films Batman récents. Version Nolan &
                         Snyder & Reeves</p>
                 </div>
                 <div class="social-footer">
-                    <!-- <a href="#" class="social-item"> -->
                     <a href="#"><img src="img/logos/logo_sayna_white.png" alt="Sayna"
                         ></a>
                     <a href="#"><img src="img/logos/icon_x.png" alt="X"></a>
